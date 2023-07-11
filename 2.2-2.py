@@ -1,9 +1,8 @@
-#2.2-2
 # Page 33
-#introduction to algorithms 4th ed
-
-#worst case: n^2
-#best case: n^2
+# Introduction to algorithms 4th ed
+# 2.2-2
+# worst case: n^2
+# best case: n^2
 
 arr = [5, 4, 6, 5, 2, 6]
 i = 0
