@@ -1,5 +1,6 @@
 # Page 25
 # introduction to algorithms 4th ed
+# 2.1-2
 arr = [1, 2, 3, 4, 5]
 sum = 0
 i = 0
