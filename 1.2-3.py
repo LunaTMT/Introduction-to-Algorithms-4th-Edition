@@ -10,7 +10,7 @@ def A1(n):
     return 100 * (n ** 2)
 
 def A2(n):
-    return 82 ** n
+    return 2 ** n
 
 n = 1
 a1 = A1(n)
