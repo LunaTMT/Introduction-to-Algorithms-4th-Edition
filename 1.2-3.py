@@ -3,7 +3,6 @@
 What is smallest value of n such that A1 runs faster than A2
 A1 = 100n^2
 A2 = 2^n
-
 """
 
 def A1(n):
