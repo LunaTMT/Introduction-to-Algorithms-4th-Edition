@@ -1,22 +1,23 @@
+# 2.2-2
 # Page 33
 # Introduction to algorithms 4th ed
-# 2.2-2
-# worst case: n^2
-# best case: n^2
+
+#worst case: n^2
+#best case: n^2
 
 arr = [5, 4, 6, 5, 2, 6]
 i = 0
 n = len(arr)-1
 
 for i in range(0, n-1):
-    min_idx = i
+    lowest = i
     j = i+1
     
+    #Finding the smallest element in A[i:n]
     while j <= n:
-        if arr[min_idx] > arr[j]:
-            min_idx = j
- 
+        if arr[lowest] > arr[j]:
+            lowest = j
         j+=1 
-    arr[i], arr[min_idx] = arr[min_idx], arr[i]
-
+    arr[i], arr[lowest] = arr[lowest], arr[i]
+    
 print(arr)
