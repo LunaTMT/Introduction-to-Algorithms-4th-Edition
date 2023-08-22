@@ -1,5 +1,4 @@
 import random
-from collections import deque
 
 def addBinaryIntegers(A, B, answer):
 
@@ -31,6 +30,7 @@ def addBinaryIntegers(A, B, answer):
     print(True if res[::-1] == answer else False)
 
 """Much more efficient solution"""
+from collections import deque
 def addBinaryIntegers2(A, B, answer):
 
     if len(A) > len(B):
@@ -40,7 +40,7 @@ def addBinaryIntegers2(A, B, answer):
 
     C = deque([]) 
     carry = 0
-    for (a, b) in  zip(A,B):
+    for (a, b) in  zip(A[::-1],B[::-1]):
         sum = int(a) + int(b) + carry
         C.appendleft(str(sum % 2))  
         carry = sum // 2 
@@ -50,11 +50,9 @@ def addBinaryIntegers2(A, B, answer):
     
     print(True if "".join(C) == answer else False)
 
-for i in range(10):
+for i in range(1):
     A = random.randint(1, 999999999999999999999)
     B = random.randint(1, 999999999999999999999)
-    A = 7
-    B = 7
     answer = A+B
     addBinaryIntegers2(bin(A)[2:], bin(B)[2:], bin(answer)[2:])
 
